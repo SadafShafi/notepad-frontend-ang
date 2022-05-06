@@ -1,0 +1,65 @@
+
+<mat-card>
+
+
+  <form [formGroup]="NotesForm" *ngIf="this.NotesForm">
+  
+    <mat-card>
+      <div>
+        <mat-form-field appearance="fill">
+          <textarea matInput  formControlName="Heading"></textarea>
+        </mat-form-field>
+      </div>
+    </mat-card>
+                          
+    <mat-card>
+      <div>
+        <mat-form-field  [formGroup]="NotesForm">
+          <!-- rows="100" cols="100" -->
+          <textarea matInput  
+          formControlName="Note" 
+          style="width:5000px; height:250px;">
+        </textarea>
+          <button class="button" type="submit"  (click) = "saveEdit()">Save Changes</button>
+          <button class="button" type="delete"  (click) = "deleteNote()">Delte Note</button>
+        </mat-form-field>
+        
+        
+      </div>
+    </mat-card>
+
+    
+    
+    
+  </form>
+
+</mat-card>
+
+
+  
+
+<!-- <form [formGroup]="NotesForm" *ngIf="this.NotesForm">
+
+  <div>
+    <input  type="text" formControlName="Heading">
+  </div>
+
+  <div style="size:300px">
+    <input type="text" formControlName="Note">
+  </div>
+
+  <button class="button" type="submit">Save Changes</button>
+
+</form> -->
+
+
+
+
+<!-- <mat-form-field></mat-form-field> -->
+ 
+
+    
+
+
+
+

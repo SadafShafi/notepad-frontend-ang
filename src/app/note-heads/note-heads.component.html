@@ -1,0 +1,19 @@
+
+<mat-card>
+
+  <div  *ngFor="let x of dat">
+    <mat-card [routerLink]="['/notesview',x.id]">
+      {{ x.heading }}
+    </mat-card>
+  </div> 
+
+
+
+</mat-card>
+
+<mat-card>
+  <button [routerLink]="['/new']">Make New Note</button>
+</mat-card>
+
+
+
